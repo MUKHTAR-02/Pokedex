@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import Body from './components/Body';
 
-function App() {
+const App = () => {
+  // controlled via parent component 
+  const [search, setSearch] = useState('');
+  const [selectedType, setSelectedType] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header
+        search={search}
+        setSearch={setSearch}
+        selectedType={selectedType}
+        setSelectedType={setSelectedType}
+      />
+      <Body
+        search={search}
+        selectedType={selectedType}
+      />
     </div>
   );
-}
+};
 
 export default App;
