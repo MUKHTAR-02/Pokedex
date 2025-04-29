@@ -32,7 +32,7 @@ const Header = ({ search, setSearch, selectedType, setSelectedType }) => {
 
       {/* App Name */}
       <h1 className="text-white text-lg sm:text-2xl font-bold whitespace-nowrap">
-        Poki-Index
+        Pokédex
       </h1>
     </div>
   );
